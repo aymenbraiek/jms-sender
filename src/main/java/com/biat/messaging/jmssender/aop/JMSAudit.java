@@ -20,7 +20,7 @@ public class JMSAudit {
 	private static final String NEXT_LINE = "\n";
 	private static final Logger log =LoggerFactory.getLogger("JMSAudit");
 	
-	@Pointcut("execution(* com.biat.messaging.jmssender.*.*(..))")
+	@Pointcut("execution(* com.biat.messaging.jmssender.jms.*.*(..))")
 	public void logJms(){};
 	
 	@Around("logJms()")

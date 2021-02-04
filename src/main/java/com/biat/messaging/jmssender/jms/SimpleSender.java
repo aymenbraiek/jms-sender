@@ -11,8 +11,7 @@ public class SimpleSender {
 	 public SimpleSender(JmsTemplate jmsTemplate){
 	 this.jmsTemplate = jmsTemplate;
 	 }
-	 public void sendMessage(String destination,
-			 String message){
+	 public void sendMessage(String destination,String message){
 			 this.jmsTemplate.convertAndSend(destination, message);
 			 }
 

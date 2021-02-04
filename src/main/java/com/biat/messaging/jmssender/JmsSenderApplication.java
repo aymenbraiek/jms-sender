@@ -17,6 +17,7 @@ public class JmsSenderApplication {
 
 	@Bean
 	 CommandLineRunner simple(JMSProperties props,SimpleSender sender){
+		System.out.println("i am here ");
 	 return args -> { sender.sendMessage(props.getQueue(), "Hello World");
 	 };
 	 }
