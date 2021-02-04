@@ -4,7 +4,7 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 
 import org.springframework.stereotype.Component;
-@Component
+//@Component
 public class QueueListener implements MessageListener {
 
 	@Override

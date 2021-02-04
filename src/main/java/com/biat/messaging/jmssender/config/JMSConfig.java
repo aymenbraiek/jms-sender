@@ -1,5 +1,7 @@
 package com.biat.messaging.jmssender.config;
 
+
+
 import javax.jms.ConnectionFactory;
 import javax.jms.MessageListener;
 
@@ -15,7 +17,7 @@ import org.springframework.jms.listener.DefaultMessageListenerContainer;
 public class JMSConfig {
 /* This is for the QueueListener */
 	
-	@Bean
+	//@Bean
 	public DefaultMessageListenerContainer customMessageListenerContainer(
 			ConnectionFactory connectionFactory, MessageListener queueListener, @Value("${biat.jms.queue}") final String destinationName){
 		DefaultMessageListenerContainer listener = new DefaultMessageListenerContainer();
