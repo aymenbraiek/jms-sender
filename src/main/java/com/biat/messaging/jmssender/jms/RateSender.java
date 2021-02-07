@@ -3,17 +3,18 @@ package com.biat.messaging.jmssender.jms;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
+import com.biat.messaging.jmssender.domain.Rate;
 
 @Component
-public class SimpleSender {
+public class RateSender {
+	
 	private JmsTemplate jmsTemplate;
 	 @Autowired
-	 public SimpleSender(JmsTemplate jmsTemplate){
+	 public RateSender(JmsTemplate jmsTemplate){
 	 this.jmsTemplate = jmsTemplate;
 	 }
-	 public void sendMessage(String destination,String message){
-			 this.jmsTemplate.convertAndSend(destination, message);
-			 }
-	 
-
+	 /* send objet  Rate*/
+	 public void sendCurrency(String destination, Rate rate){
+	 this.jmsTemplate.convertAndSend(destination,rate);
+	 }
 }

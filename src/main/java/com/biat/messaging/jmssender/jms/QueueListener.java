@@ -2,8 +2,6 @@ package com.biat.messaging.jmssender.jms;
 
 import javax.jms.Message;
 import javax.jms.MessageListener;
-
-import org.springframework.stereotype.Component;
 //@Component
 public class QueueListener implements MessageListener {
 
